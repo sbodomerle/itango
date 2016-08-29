@@ -1,0 +1,75 @@
+Source: itango
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Sandor Bodo-Merle <sbodomerle@gmail.com>
+Section: science
+Priority: extra
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-ipython,
+               python-setuptools,
+               python-tango,
+               python3-all,
+               python3-ipython,
+               python3-setuptools,
+               python3-tango
+Build-Depends-Indep: python-sphinx
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/itango.git
+Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/itango.git
+Homepage: https://pythonhosted.org/itango/
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+
+Package: python-itango
+Architecture: all
+Section: python
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Recommends: python-qtconsole | ipython-qtconsole
+Provides: ${python:Provides}
+Breaks: python-pytango (<< 9.2.0)
+Description: Interactive Tango client - Python 2
+ ITango works like a normal python console, but it provides a nice set of
+ features from IPython. It also adds set of PyTango specific features:
+ .
+  * automatic import of Tango objects
+  * device and attribute name completion
+  * list tango devices, classes, servers
+  * customized tango error message
+  * database utilities
+ .
+ This is the Python 2 version of the package.
+
+Package: python3-itango
+Architecture: all
+Section: python
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python3:Depends}
+Recommends: python3-qtconsole | ipython3-qtconsole
+Provides: ${python3:Provides}
+Breaks: python3-pytango (<< 9.2.0)
+Description: Interactive Tango client - Python 3
+ ITango works like a normal python console, but it provides a nice set of
+ features from IPython. It also adds set of PyTango specific features:
+ .
+  * automatic import of Tango objects
+  * device and attribute name completion
+  * list tango devices, classes, servers
+  * customized tango error message
+  * database utilities
+ .
+ This is the Python 3 version of the package.
+
+Package: python-itango-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends}
+Description: Interactive Tango client - documentation
+ ITango works like a normal python console, but it provides a nice set of
+ features from IPython. It also adds set of PyTango specific features:
+ .
+ This package contains the documentation for the python-itango package.

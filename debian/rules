@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=itango
+
+# sphinxdoc is available only when building the arch-all packages
+WITH_SPHINXDOC = $(shell if [ -x /usr/bin/dh_sphinxdoc ]; then echo "--with sphinxdoc"; fi)
+
+%:
+	dh $@ --with python2,python3 $(WITH_SPHINXDOC) --buildsystem=pybuild
+
+override_dh_auto_build:
+	dh_auto_build
+	PYTHONPATH=. http_proxy='127.0.0.1:9' sphinx-build -N -bman doc/ build/man
+	cp build/man/itango.1 build/man/itango3.1
+	PYTHONPATH=. http_proxy='127.0.0.1:9' sphinx-build -N -bhtml doc/ build/sphinx/html
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf build
+	rm -rf *.egg-info

@@ -1,0 +1,9 @@
+Document: itango-manual
+Title: ITango documentation manual
+Author: Tiago Coutinho <tcoutinho@cells.es>
+Abstract: ITango is a PyTango CLI based on IPython.
+Section: Text
+
+Format: HTML
+Index: /usr/share/doc/python-itango-doc/html/itango.html
+Files: /usr/share/doc/python-itango-doc/html/*
