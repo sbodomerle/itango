@@ -1,0 +1,25 @@
+From 04b0b61a47795f888d1dbc04aa2824b7c1651a55 Mon Sep 17 00:00:00 2001
+From: Bodo-Merle Sandor <sbodomerle@gmail.com>
+Date: Tue, 13 Sep 2016 11:19:19 +0200
+Subject: [PATCH 1/2] basestring is not python3 compatible
+
+---
+ itango/itango.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/itango/itango.py b/itango/itango.py
+index 9a195e2..2c44747 100644
+--- a/itango/itango.py
++++ b/itango/itango.py
+@@ -1374,7 +1374,7 @@ def patch_qt_console():
+         def _banner_default(self):
+             config = get_config()
+             banner = config.ITangoConsole.banner
+-            return banner if isinstance(banner, basestring) else ''
++            return banner if isinstance(banner, str) else ''
+ 
+     # Patch widget factory
+     try:
+-- 
+2.9.3
+
