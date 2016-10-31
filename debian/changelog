@@ -1,3 +1,10 @@
+itango (0.1.4-1) unstable; urgency=medium
+
+  * Team Upload
+  * Uploaded into Unstable
+
+ -- Picca Frédéric-Emmanuel <picca@debian.org>  Mon, 31 Oct 2016 10:09:49 +0100
+
 itango (0.1.4-1~exp1) experimental; urgency=medium
 
   * New upstream version 0.1.4
