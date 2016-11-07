@@ -1,3 +1,10 @@
+itango (0.1.6-1) unstable; urgency=medium
+
+  * New upstream version 0.1.6
+  * Drop all patches - applied upstream
+
+ -- Sandor Bodo-Merle <sbodomerle@gmail.com>  Mon, 07 Nov 2016 10:07:19 +0100
+
 itango (0.1.4-1) unstable; urgency=medium
 
   * Team Upload
